@@ -1,5 +1,52 @@
 # Changelog
 
+## [0.6.4](https://github.com/q-qp-p/langchain-deepagents/compare/deepagents==0.6.3...deepagents==0.6.4) (2026-05-21)
+
+
+### Features
+
+* **quickjs:** rename middleware ([#3334](https://github.com/q-qp-p/langchain-deepagents/issues/3334)) ([fc80075](https://github.com/q-qp-p/langchain-deepagents/commit/fc80075c65c3b4beb8f672b6bb27464fee6d79c2))
+* **sdk:** `ls_agent_type` configurable tag on subagent runs ([#2788](https://github.com/q-qp-p/langchain-deepagents/issues/2788)) ([3bcc51a](https://github.com/q-qp-p/langchain-deepagents/commit/3bcc51a95da80094cfc8bc4bcaf25dc1e2ad8f44))
+* **sdk:** add `ContextHubBackend` backend type ([#3338](https://github.com/q-qp-p/langchain-deepagents/issues/3338)) ([6962826](https://github.com/q-qp-p/langchain-deepagents/commit/69628263cb2c1f6951b1b37bbc0edbb85983ad51))
+* **sdk:** add `system_prompt` override slot to memory, skills, and summarization ([#3451](https://github.com/q-qp-p/langchain-deepagents/issues/3451)) ([7583f4a](https://github.com/q-qp-p/langchain-deepagents/commit/7583f4aff6a6044bc987ee7980d322bb5c791428))
+* **sdk:** profiles API ([#2892](https://github.com/q-qp-p/langchain-deepagents/issues/2892)) ([7365ad1](https://github.com/q-qp-p/langchain-deepagents/commit/7365ad1600064eec616c5de970320104189ddf80))
+* **sdk:** v0.6 ([4db09ac](https://github.com/q-qp-p/langchain-deepagents/commit/4db09acba34b38521192b8f278723524be560779))
+
+
+### Bug Fixes
+
+* **cli:** prevent stdin hang by passing `DEVNULL` ([#2427](https://github.com/q-qp-p/langchain-deepagents/issues/2427)) ([5bf5fae](https://github.com/q-qp-p/langchain-deepagents/commit/5bf5fae8d93beba90628f2f71e3e79817a36ac9e))
+* **code:** persist `_context_tokens` via `after_model` middleware ([#3496](https://github.com/q-qp-p/langchain-deepagents/issues/3496)) ([e2bb284](https://github.com/q-qp-p/langchain-deepagents/commit/e2bb284e506e0e49a05169fc6de01bdf42350267))
+* **sdk:** add write preflight and native read to langsmith sandbox ([#2695](https://github.com/q-qp-p/langchain-deepagents/issues/2695)) ([741221c](https://github.com/q-qp-p/langchain-deepagents/commit/741221c9d8b65a535816e318ee24d3c19a4bde80))
+* **sdk:** align `MemoryMiddleware` prompt with investigate-first agent behavior ([#2461](https://github.com/q-qp-p/langchain-deepagents/issues/2461)) ([d53c8f4](https://github.com/q-qp-p/langchain-deepagents/commit/d53c8f4f481288a3aa04a5e62362beba6ed7e57a))
+* **sdk:** anchor ripgrep glob to search root ([#3454](https://github.com/q-qp-p/langchain-deepagents/issues/3454)) ([e50fa3f](https://github.com/q-qp-p/langchain-deepagents/commit/e50fa3f00ab1b1a84bbaed74bf7e89118b7c2d82))
+* **sdk:** assign UUIDs to ID-less messages in _messages_delta_reducer ([#3513](https://github.com/q-qp-p/langchain-deepagents/issues/3513)) ([6d959ad](https://github.com/q-qp-p/langchain-deepagents/commit/6d959ade30655eae3967c9809994434e0bbd1148))
+* **sdk:** auto-added GP subagent inherits parent permissions ([#3131](https://github.com/q-qp-p/langchain-deepagents/issues/3131)) ([0d55b3b](https://github.com/q-qp-p/langchain-deepagents/commit/0d55b3ba8b974d06b1e0f52893f33e44496bff8b))
+* **sdk:** avoid deprecated-use warnings in `CompositeBackend` path mutation ([#3244](https://github.com/q-qp-p/langchain-deepagents/issues/3244)) ([64d45f6](https://github.com/q-qp-p/langchain-deepagents/commit/64d45f67c86edb4df2ced0e7b82f1a8fd158ec8c))
+* **sdk:** clarify skill source labels in system prompt ([#3464](https://github.com/q-qp-p/langchain-deepagents/issues/3464)) ([fc6a24f](https://github.com/q-qp-p/langchain-deepagents/commit/fc6a24f18829cf3f36089945226edfa50d52ab9e))
+* **sdk:** default OpenRouter routing to ignore Azure upstream ([#3157](https://github.com/q-qp-p/langchain-deepagents/issues/3157)) ([01a9113](https://github.com/q-qp-p/langchain-deepagents/commit/01a911379d368fab8280cd827c38776800abe7b8))
+* **sdk:** harden `FilesystemBackend` against symlink loops ([#3035](https://github.com/q-qp-p/langchain-deepagents/issues/3035)) ([abd02f9](https://github.com/q-qp-p/langchain-deepagents/commit/abd02f99ef12030bdfe429fdc3ad80a2785bea61))
+* **sdk:** import profile re-exports from leaf modules ([#3377](https://github.com/q-qp-p/langchain-deepagents/issues/3377)) ([ca99391](https://github.com/q-qp-p/langchain-deepagents/commit/ca99391668ea1510932f8e9097e8ed3c0caadf73))
+* **sdk:** import profile symbols directly from `harness_profiles` ([#3291](https://github.com/q-qp-p/langchain-deepagents/issues/3291)) ([503453c](https://github.com/q-qp-p/langchain-deepagents/commit/503453c06f7e0545914789a07ddba6ca6b0c8ec5))
+* **sdk:** normalize Windows backslash paths before PurePosixPath processing ([#1859](https://github.com/q-qp-p/langchain-deepagents/issues/1859)) ([e1c1d50](https://github.com/q-qp-p/langchain-deepagents/commit/e1c1d5024729f5205eaa42bf6a9bc1c93a30d043))
+* **sdk:** patch invalid tool calls ([#3386](https://github.com/q-qp-p/langchain-deepagents/issues/3386)) ([c916d1b](https://github.com/q-qp-p/langchain-deepagents/commit/c916d1b2e3a81dcd4fb2e595d6b971923c18fa31))
+* **sdk:** preserve CRLF line endings in sandbox edit ([#2899](https://github.com/q-qp-p/langchain-deepagents/issues/2899)) ([291aebe](https://github.com/q-qp-p/langchain-deepagents/commit/291aebe21f8a53604a2bf47daa120761dace2536))
+* **sdk:** propagate `CompiledSubAgent` name into `lc_agent_name` metadata ([#3045](https://github.com/q-qp-p/langchain-deepagents/issues/3045)) ([f671e6b](https://github.com/q-qp-p/langchain-deepagents/commit/f671e6b18aa49700a535f7b48441662b67dafef9))
+* **sdk:** re-export filesystem permission for backwards compatibility ([#3036](https://github.com/q-qp-p/langchain-deepagents/issues/3036)) ([e04b50a](https://github.com/q-qp-p/langchain-deepagents/commit/e04b50ae291abefa64ee2750a0c1bbfd93954b32))
+* **sdk:** strip HTML comments from memory content before system prompt injection ([#3462](https://github.com/q-qp-p/langchain-deepagents/issues/3462)) ([bfbb8bc](https://github.com/q-qp-p/langchain-deepagents/commit/bfbb8bc5575ebd1ba9aa29430f6d2f86c24b7d3c))
+* **sdk:** subagents: update prompt and make fetching of last message more robust ([#3406](https://github.com/q-qp-p/langchain-deepagents/issues/3406)) ([4421bec](https://github.com/q-qp-p/langchain-deepagents/commit/4421bec94ffbe1f3a3bf44088ebcf8ab8c24a736))
+* **sdk:** summarization: truncate trailing ToolMessages to keep context within `keep` limit ([#3405](https://github.com/q-qp-p/langchain-deepagents/issues/3405)) ([bee514f](https://github.com/q-qp-p/langchain-deepagents/commit/bee514fd24862b6b22a5993eb8b6cfc69e42dd80))
+* **sdk:** support read-your-writes in StateBackend ([#2991](https://github.com/q-qp-p/langchain-deepagents/issues/2991)) ([0924869](https://github.com/q-qp-p/langchain-deepagents/commit/0924869bc3d946577e7c3cbc79a86e4aaf522edd))
+* **sdk:** surface EOF-newline mismatch in `edit_file` ([#3031](https://github.com/q-qp-p/langchain-deepagents/issues/3031)) ([d30686e](https://github.com/q-qp-p/langchain-deepagents/commit/d30686ec82d36a0e9430f7c512c34835aba2c079))
+* **sdk:** surface OS errors in sandbox ls/read/edit/glob ([#3359](https://github.com/q-qp-p/langchain-deepagents/issues/3359)) ([7598bd9](https://github.com/q-qp-p/langchain-deepagents/commit/7598bd93f72b609a46da64f7c458c42ac07a0f3a))
+* **sdk:** treat boundary-truncated UTF-8 in `read()` prefix check as text ([#2980](https://github.com/q-qp-p/langchain-deepagents/issues/2980)) ([c36ebc7](https://github.com/q-qp-p/langchain-deepagents/commit/c36ebc7be5840e9008279992741c67a8377ffc01))
+* **sdk:** Use configurable directly instead of tracing context for subagent tagging ([#2845](https://github.com/q-qp-p/langchain-deepagents/issues/2845)) ([bd6ec6b](https://github.com/q-qp-p/langchain-deepagents/commit/bd6ec6bcebcdcc26f6b79e2c55611074b0e01631))
+
+
+### Performance Improvements
+
+* **sdk:** add cache breakpoint to `MemoryMiddleware` ([#2713](https://github.com/q-qp-p/langchain-deepagents/issues/2713)) ([1699f3a](https://github.com/q-qp-p/langchain-deepagents/commit/1699f3aea710985087b16318bb8e6f6e80e02a1b))
+
 ## [0.6.3](https://github.com/langchain-ai/deepagents/compare/deepagents==0.6.2...deepagents==0.6.3) (2026-05-20)
 
 ### Bug Fixes
