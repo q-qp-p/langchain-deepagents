@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.5](https://github.com/q-qp-p/langchain-deepagents/compare/langchain-modal==0.0.4...langchain-modal==0.0.5) (2026-05-21)
+
+
+### Features
+
+* **sdk:** v0.6 ([4db09ac](https://github.com/q-qp-p/langchain-deepagents/commit/4db09acba34b38521192b8f278723524be560779))
+
 ## [0.0.4](https://github.com/langchain-ai/deepagents/compare/langchain-modal==0.0.3...langchain-modal==0.0.4) (2026-05-12)
 
 
