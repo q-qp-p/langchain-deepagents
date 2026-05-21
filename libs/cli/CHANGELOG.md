@@ -3,6 +3,121 @@
 From 0.1.0 onward, `deepagents-cli` only contains `deploy`, `dev`, and `init`.
 The coding agent (interactive TUI & headless CLI) moved to [`deepagents-code`](https://github.com/langchain-ai/deepagents/blob/main/libs/code/CHANGELOG.md).
 
+## [0.1.0](https://github.com/q-qp-p/langchain-deepagents/compare/deepagents-cli==0.1.2...deepagents-cli==0.1.0) (2026-05-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* **cli:** removes the interactive TUI / coding-agent surface from `deepagents-cli`. The package now only ships the `deploy` command and supporting config. Users relying on the chat REPL, sessions, MCP tooling, skills, and related widgets should migrate to `deepagents-code`.
+
+### Features
+
+* **cli:** `--max-turns` flag on non-interactive mode ([#2832](https://github.com/q-qp-p/langchain-deepagents/issues/2832)) ([567bcd8](https://github.com/q-qp-p/langchain-deepagents/commit/567bcd8f2065e089f4905a901efe7154add23121))
+* **cli:** `--startup-cmd` flag ([#2841](https://github.com/q-qp-p/langchain-deepagents/issues/2841)) ([8adcc2c](https://github.com/q-qp-p/langchain-deepagents/commit/8adcc2c2e612346c263d02d1ec5c33e0d63da5a3))
+* **cli:** `/agents` switcher ([#2558](https://github.com/q-qp-p/langchain-deepagents/issues/2558)) ([3a2b777](https://github.com/q-qp-p/langchain-deepagents/commit/3a2b77773a19dd48f9c51dfb35cdfc5c33126d77))
+* **cli:** `/copy` slash command ([#3225](https://github.com/q-qp-p/langchain-deepagents/issues/3225)) ([646df53](https://github.com/q-qp-p/langchain-deepagents/commit/646df5364274ba11c1104038095ed4478c076c40))
+* **cli:** `/reload` skill diff report ([#3153](https://github.com/q-qp-p/langchain-deepagents/issues/3153)) ([7c3278a](https://github.com/q-qp-p/langchain-deepagents/commit/7c3278a46fe1bace82224f43d8e1b7a023d0086a))
+* **cli:** `allowedTools` and `disabledTools` filters in MCP config ([#2835](https://github.com/q-qp-p/langchain-deepagents/issues/2835)) ([eafd691](https://github.com/q-qp-p/langchain-deepagents/commit/eafd6912db637ab59085a0b05d6e36d6cdd10e1a))
+* **cli:** `shift+enter` newline on kitty-capable terminals ([#2869](https://github.com/q-qp-p/langchain-deepagents/issues/2869)) ([34e6614](https://github.com/q-qp-p/langchain-deepagents/commit/34e6614a2c6e6a7e33f763ac5b527c13b324a690))
+* **cli:** actionable notifications, update modal ([#2855](https://github.com/q-qp-p/langchain-deepagents/issues/2855)) ([5fcd368](https://github.com/q-qp-p/langchain-deepagents/commit/5fcd368088079a84f151e0a3f5e4b9ac29c360c1))
+* **cli:** add `--host` option to `deepagents dev` command ([#3444](https://github.com/q-qp-p/langchain-deepagents/issues/3444)) ([0bb1e74](https://github.com/q-qp-p/langchain-deepagents/commit/0bb1e74bba8097b38f204e3db6e6ebad7e0f5317))
+* **cli:** add `ContextHubBackend` for iteration in `deepagents-deploy` ([#2923](https://github.com/q-qp-p/langchain-deepagents/issues/2923)) ([fb0f0ba](https://github.com/q-qp-p/langchain-deepagents/commit/fb0f0ba08a58c3d2ae5db2435c07e3b826f395fa))
+* **cli:** add docs link to project MCP approval prompt ([#3341](https://github.com/q-qp-p/langchain-deepagents/issues/3341)) ([b5c1228](https://github.com/q-qp-p/langchain-deepagents/commit/b5c12280e47bc37938290a4219317f47c1abfa8a))
+* **cli:** add env var for launch theme ([#3176](https://github.com/q-qp-p/langchain-deepagents/issues/3176)) ([47a3e4e](https://github.com/q-qp-p/langchain-deepagents/commit/47a3e4e219bf43a08697fceabfaddcadc464c97b))
+* **cli:** add splash tips visibility env var ([#3179](https://github.com/q-qp-p/langchain-deepagents/issues/3179)) ([c9be71c](https://github.com/q-qp-p/langchain-deepagents/commit/c9be71ce431aadbf24424411a57fada2ed560c93))
+* **cli:** add splash version visibility env var ([#3173](https://github.com/q-qp-p/langchain-deepagents/issues/3173)) ([f57d09e](https://github.com/q-qp-p/langchain-deepagents/commit/f57d09e46b965091525817d1e17741ec61aa6274))
+* **cli:** add startup splash env var overrides ([#3175](https://github.com/q-qp-p/langchain-deepagents/issues/3175)) ([8d3d197](https://github.com/q-qp-p/langchain-deepagents/commit/8d3d197941c878a409795b870c308f4b761dea5b))
+* **cli:** add terminal OSC 9;4 progress & escape helper ([#3347](https://github.com/q-qp-p/langchain-deepagents/issues/3347)) ([75d60cd](https://github.com/q-qp-p/langchain-deepagents/commit/75d60cd82f559b2944b78a348d16b0a10a00d663))
+* **cli:** add TUI footer visibility env vars ([#3171](https://github.com/q-qp-p/langchain-deepagents/issues/3171)) ([8f5796b](https://github.com/q-qp-p/langchain-deepagents/commit/8f5796b3704c95c6f775445496177d955eec2da3))
+* **cli:** auto-discover Textual built-in themes ([#3068](https://github.com/q-qp-p/langchain-deepagents/issues/3068)) ([27894e3](https://github.com/q-qp-p/langchain-deepagents/commit/27894e336f20f270fb4bb685bf979f24b9bea0bc))
+* **cli:** auto-wire issues board with context hub repo handle ([#3231](https://github.com/q-qp-p/langchain-deepagents/issues/3231)) ([94628fe](https://github.com/q-qp-p/langchain-deepagents/commit/94628fef98aefb5389ab56c8acee31726d6385dc))
+* **cli:** bundled chat frontend for deepagent deploy ([#2940](https://github.com/q-qp-p/langchain-deepagents/issues/2940)) ([9bde0c7](https://github.com/q-qp-p/langchain-deepagents/commit/9bde0c7835ded20e80466d8361f40784141d68d8))
+* **cli:** custom auth via `[auth]` ([#2734](https://github.com/q-qp-p/langchain-deepagents/issues/2734)) ([417ddaa](https://github.com/q-qp-p/langchain-deepagents/commit/417ddaab4804a54a8f83721bb8577d65cfa3659f))
+* **cli:** emit `user.name.set` hook during onboarding ([#3177](https://github.com/q-qp-p/langchain-deepagents/issues/3177)) ([43a494e](https://github.com/q-qp-p/langchain-deepagents/commit/43a494ed2fe44b7ba3a03d9833301ff3fc485b73))
+* **cli:** external event listener via Unix domain socket ([#3207](https://github.com/q-qp-p/langchain-deepagents/issues/3207)) ([ffeac22](https://github.com/q-qp-p/langchain-deepagents/commit/ffeac22f8e5572681ca1ad7c4f2e55ef57207577))
+* **cli:** filter threads in switcher by directory ([#3290](https://github.com/q-qp-p/langchain-deepagents/issues/3290)) ([07a973a](https://github.com/q-qp-p/langchain-deepagents/commit/07a973ae5b0256fddfd9591dc88c7987e5581264))
+* **cli:** first-run onboarding flow ([#3102](https://github.com/q-qp-p/langchain-deepagents/issues/3102)) ([a71f852](https://github.com/q-qp-p/langchain-deepagents/commit/a71f852df3e491326b8eaa03ee7cb7b3b94fe73d))
+* **cli:** free-text reject reason on HITL approval prompt ([#3344](https://github.com/q-qp-p/langchain-deepagents/issues/3344)) ([dcc48f4](https://github.com/q-qp-p/langchain-deepagents/commit/dcc48f48d20757f17011e65b61363dd0347af164))
+* **cli:** hint `Enter` behavior in `/model` empty state ([#2933](https://github.com/q-qp-p/langchain-deepagents/issues/2933)) ([7cffa16](https://github.com/q-qp-p/langchain-deepagents/commit/7cffa16a072bc77def78e4cda09c2e5a2cf8ca39))
+* **cli:** in-TUI API key entry via `/auth` ([#3123](https://github.com/q-qp-p/langchain-deepagents/issues/3123)) ([eedbc3a](https://github.com/q-qp-p/langchain-deepagents/commit/eedbc3a8b5f88059636e497f72c7cec5a420f998))
+* **cli:** incognito shell command mode ([#3252](https://github.com/q-qp-p/langchain-deepagents/issues/3252)) ([56aee50](https://github.com/q-qp-p/langchain-deepagents/commit/56aee504b5f8196d569757794e2e7e61cf9bef18))
+* **cli:** inline argument hints for slash commands ([#2181](https://github.com/q-qp-p/langchain-deepagents/issues/2181)) ([6b58e06](https://github.com/q-qp-p/langchain-deepagents/commit/6b58e06b06f6fb360d85c54eac31953d1e47dd7a))
+* **cli:** live progress UI and periodic recheck for self-updates ([#3280](https://github.com/q-qp-p/langchain-deepagents/issues/3280)) ([3e9e805](https://github.com/q-qp-p/langchain-deepagents/commit/3e9e80597d9e2edc7685400023a2cad15a84a6b8))
+* **cli:** Ollama model discovery via probe ([#3286](https://github.com/q-qp-p/langchain-deepagents/issues/3286)) ([c1dd6c8](https://github.com/q-qp-p/langchain-deepagents/commit/c1dd6c8a0f8b423edc75be243fc0487e4c900703))
+* **cli:** per-terminal theme selection ([#3248](https://github.com/q-qp-p/langchain-deepagents/issues/3248)) ([e2251f1](https://github.com/q-qp-p/langchain-deepagents/commit/e2251f17c0cc9363d6ed2385436ade22a8e74cd2))
+* **cli:** refresh footer git branch after shell commands ([#2851](https://github.com/q-qp-p/langchain-deepagents/issues/2851)) ([ee4fddd](https://github.com/q-qp-p/langchain-deepagents/commit/ee4fddde9454ee8f7ede98ee9a346da6c5ccd3d9))
+* **cli:** remove coding agent ([#3422](https://github.com/q-qp-p/langchain-deepagents/issues/3422)) ([c7b3119](https://github.com/q-qp-p/langchain-deepagents/commit/c7b311933da6245267f4bded050c36279973de1e))
+* **cli:** rework `/version`, add release-age and editable-install guard ([#2854](https://github.com/q-qp-p/langchain-deepagents/issues/2854)) ([1ae053f](https://github.com/q-qp-p/langchain-deepagents/commit/1ae053f347679e58562d2b81eb6d6e6e9bbf0b07))
+* **cli:** rework MCP integration and add OAuth login ([#2906](https://github.com/q-qp-p/langchain-deepagents/issues/2906)) ([6b7b0be](https://github.com/q-qp-p/langchain-deepagents/commit/6b7b0bef95db673fed23fc92803abaaa398b0a6d))
+* **cli:** richer provider auth states, hosted Ollama auth ([#3111](https://github.com/q-qp-p/langchain-deepagents/issues/3111)) ([eeaeb76](https://github.com/q-qp-p/langchain-deepagents/commit/eeaeb7663515eb0cfa8f0389e7f8446e95e84911))
+* **cli:** set-as-default in `/agents` picker, harden persistence ([#3126](https://github.com/q-qp-p/langchain-deepagents/issues/3126)) ([4751e33](https://github.com/q-qp-p/langchain-deepagents/commit/4751e33fbad5945a740cae03bda758223201433b))
+* **cli:** show sandbox provider in header `sub_title` ([#3295](https://github.com/q-qp-p/langchain-deepagents/issues/3295)) ([779f7f4](https://github.com/q-qp-p/langchain-deepagents/commit/779f7f45c501f3c6d53e12087e3d4c340ef8aded))
+* **cli:** strip provider-specific model prefixes in status bar footer ([#3222](https://github.com/q-qp-p/langchain-deepagents/issues/3222)) ([eaa1d82](https://github.com/q-qp-p/langchain-deepagents/commit/eaa1d821c96246471b274663e714878fdd2f67bb))
+* **cli:** subagents for `deepagents deploy` ([#2786](https://github.com/q-qp-p/langchain-deepagents/issues/2786)) ([7dd5565](https://github.com/q-qp-p/langchain-deepagents/commit/7dd5565e30ab91a2cd2ca10fcd227e590451f13c))
+* **cli:** surface MCP config discovery paths and format in help screens ([#3152](https://github.com/q-qp-p/langchain-deepagents/issues/3152)) ([ce6887c](https://github.com/q-qp-p/langchain-deepagents/commit/ce6887c89bacee63bdd74ab9d26097e2e418ff43))
+* **cli:** surface sandbox startup errors in server crash messages ([#3306](https://github.com/q-qp-p/langchain-deepagents/issues/3306)) ([2606d57](https://github.com/q-qp-p/langchain-deepagents/commit/2606d57b623f16955df6f91e693051f4b61f6120))
+* **code:** port from `libs/cli` ([#3388](https://github.com/q-qp-p/langchain-deepagents/issues/3388)) ([2ac7d41](https://github.com/q-qp-p/langchain-deepagents/commit/2ac7d4153398889100d5fd163ab4a122633862b5))
+* **evals:** add `open-fireworks` model preset ([#3182](https://github.com/q-qp-p/langchain-deepagents/issues/3182)) ([a748fdd](https://github.com/q-qp-p/langchain-deepagents/commit/a748fddd1ef463212e28dd0f6d0be6403ed8dd9f))
+* **sdk:** profiles API ([#2892](https://github.com/q-qp-p/langchain-deepagents/issues/2892)) ([7365ad1](https://github.com/q-qp-p/langchain-deepagents/commit/7365ad1600064eec616c5de970320104189ddf80))
+* **sdk:** v0.6 ([4db09ac](https://github.com/q-qp-p/langchain-deepagents/commit/4db09acba34b38521192b8f278723524be560779))
+
+
+### Bug Fixes
+
+* **ci,deps:** harden manual releases and update `python-multipart` ([#3383](https://github.com/q-qp-p/langchain-deepagents/issues/3383)) ([a5da793](https://github.com/q-qp-p/langchain-deepagents/commit/a5da793a78fcd8e9dc47a6cc1f5d62b9eb049543))
+* **cli:** add `together` provider to bundler deps and optional extras ([#2670](https://github.com/q-qp-p/langchain-deepagents/issues/2670)) ([4290953](https://github.com/q-qp-p/langchain-deepagents/commit/4290953e44570ec02399e4d423ab4ffd24e97609))
+* **cli:** allow multiple-choice labels to wrap in narrow ask-user menus ([#3257](https://github.com/q-qp-p/langchain-deepagents/issues/3257)) ([79a38d9](https://github.com/q-qp-p/langchain-deepagents/commit/79a38d9a3a18f28903717a0d4efa8ad66caee129))
+* **cli:** allow TUI launch without preconfigured model credentials ([#3301](https://github.com/q-qp-p/langchain-deepagents/issues/3301)) ([aa28ff7](https://github.com/q-qp-p/langchain-deepagents/commit/aa28ff73768a826b216bfa54d76ecd313c325077))
+* **cli:** apply `--model-params` on `/model` re-select ([#3072](https://github.com/q-qp-p/langchain-deepagents/issues/3072)) ([50546dd](https://github.com/q-qp-p/langchain-deepagents/commit/50546dd3d368af297084929ee3aa91ccf8496fca))
+* **cli:** broken filesystem permissions import ([#3033](https://github.com/q-qp-p/langchain-deepagents/issues/3033)) ([8d3e684](https://github.com/q-qp-p/langchain-deepagents/commit/8d3e684b5d104c6b1eb784357fc768f4db20a0bb))
+* **cli:** catch `WorkerCancelled` in `await_prewarm_imports` ([#3178](https://github.com/q-qp-p/langchain-deepagents/issues/3178)) ([aa0d0f7](https://github.com/q-qp-p/langchain-deepagents/commit/aa0d0f732680a917bfc407f61f689326006be163))
+* **cli:** dedupe MCP servers in project trust approval prompt ([#3342](https://github.com/q-qp-p/langchain-deepagents/issues/3342)) ([73484ea](https://github.com/q-qp-p/langchain-deepagents/commit/73484ea551189985190f52cb26b299819d3fc37d))
+* **cli:** expand `${VAR}` in `mcp.json` header values ([#3523](https://github.com/q-qp-p/langchain-deepagents/issues/3523)) ([6cfc5f9](https://github.com/q-qp-p/langchain-deepagents/commit/6cfc5f9004271c23c486a0b05e8f9f0002e75e2b))
+* **cli:** gate agent-swap resume hint on server checkpoint ([#2862](https://github.com/q-qp-p/langchain-deepagents/issues/2862)) ([f14b9cd](https://github.com/q-qp-p/langchain-deepagents/commit/f14b9cd3cc41f92ddb089d4294cba8496d517807))
+* **cli:** gate async task tools by actual names ([#3094](https://github.com/q-qp-p/langchain-deepagents/issues/3094)) ([aae8dfe](https://github.com/q-qp-p/langchain-deepagents/commit/aae8dfebab184586322129ec162e083ebfd372cc))
+* **cli:** halt turn immediately when `ask_user` is cancelled ([#3258](https://github.com/q-qp-p/langchain-deepagents/issues/3258)) ([00d9b99](https://github.com/q-qp-p/langchain-deepagents/commit/00d9b99ce748d34cb150e08e2c46be6d648b3170))
+* **cli:** hide approval menu on selection ([#3097](https://github.com/q-qp-p/langchain-deepagents/issues/3097)) ([7dafd30](https://github.com/q-qp-p/langchain-deepagents/commit/7dafd3049ad7725353bbf12bf80f476b52916208))
+* **cli:** honor SDK `ProviderProfile` defaults in `create_model` ([#2962](https://github.com/q-qp-p/langchain-deepagents/issues/2962)) ([6fb0446](https://github.com/q-qp-p/langchain-deepagents/commit/6fb0446626aa0395c7b3c45142a0b36eb7469c3a))
+* **cli:** keep Thinking spinner during `edit_file` approval ([#3310](https://github.com/q-qp-p/langchain-deepagents/issues/3310)) ([d06133f](https://github.com/q-qp-p/langchain-deepagents/commit/d06133f8dd7cb924c82e46ece3e165d561ef7d9e))
+* **cli:** keep thinking spinner visible during text streaming ([#2849](https://github.com/q-qp-p/langchain-deepagents/issues/2849)) ([2cb2244](https://github.com/q-qp-p/langchain-deepagents/commit/2cb22446bc1351d20e8bbfa9f23b5d668947351f))
+* **cli:** move internal state under hidden directory ([#3106](https://github.com/q-qp-p/langchain-deepagents/issues/3106)) ([ef4c717](https://github.com/q-qp-p/langchain-deepagents/commit/ef4c71763086a4e4899ba7ced6f9eb478d38069e))
+* **cli:** normalize serialized message dicts in `/offload` ([#2808](https://github.com/q-qp-p/langchain-deepagents/issues/2808)) ([0d11bd4](https://github.com/q-qp-p/langchain-deepagents/commit/0d11bd46fd682c7aa3f008918771e9759dca7352))
+* **cli:** only restore iTerm2 cursor guide when it was enabled at startup ([#3256](https://github.com/q-qp-p/langchain-deepagents/issues/3256)) ([2620ff5](https://github.com/q-qp-p/langchain-deepagents/commit/2620ff56d1d89275e604e756abe54c1408414167))
+* **cli:** pause input cursor blink when terminal loses OS focus ([#3246](https://github.com/q-qp-p/langchain-deepagents/issues/3246)) ([8582b83](https://github.com/q-qp-p/langchain-deepagents/commit/8582b8355d5c0c70f45cee9522e4c8e02264005e))
+* **cli:** preserve recent agent across thread resume ([#3108](https://github.com/q-qp-p/langchain-deepagents/issues/3108)) ([442a0d4](https://github.com/q-qp-p/langchain-deepagents/commit/442a0d474aa1e767d542cb01f6e338431c18e5a8))
+* **cli:** prevent import deadlock during skill discovery and prewarm ([#3385](https://github.com/q-qp-p/langchain-deepagents/issues/3385)) ([0bf8dd1](https://github.com/q-qp-p/langchain-deepagents/commit/0bf8dd1cfd680bd4d27ce19295f96c720f525787))
+* **cli:** queue `/model` switches during server startup ([#2895](https://github.com/q-qp-p/langchain-deepagents/issues/2895)) ([6ed7b65](https://github.com/q-qp-p/langchain-deepagents/commit/6ed7b65a40ac5bd926e94edd944bd552e8d6b5b4))
+* **cli:** re-render assistant messages after streaming to fix fenced code disappearance ([#3293](https://github.com/q-qp-p/langchain-deepagents/issues/3293)) ([01b0a44](https://github.com/q-qp-p/langchain-deepagents/commit/01b0a44353a891a2ff10b3a2e2f6e23cc0879c9b))
+* **cli:** re-show thinking spinner on hitl/`ask_user` resume ([#2847](https://github.com/q-qp-p/langchain-deepagents/issues/2847)) ([34a6167](https://github.com/q-qp-p/langchain-deepagents/commit/34a6167b0c275c7e4da067ef276a837f60da2f8a))
+* **cli:** recover from failed server startup via `/model` ([#3056](https://github.com/q-qp-p/langchain-deepagents/issues/3056)) ([6ee375e](https://github.com/q-qp-p/langchain-deepagents/commit/6ee375e979b672cd1d172669f0e5a7a665431d7c))
+* **cli:** reject out-of-tree symlinked project `AGENTS.md` ([#3039](https://github.com/q-qp-p/langchain-deepagents/issues/3039)) ([4618098](https://github.com/q-qp-p/langchain-deepagents/commit/4618098e59c8c8d1d3f91354e4f4163a9582f710))
+* **cli:** remove legacy shell tool aliases and harden HITL widget cleanup ([#3340](https://github.com/q-qp-p/langchain-deepagents/issues/3340)) ([398f7f4](https://github.com/q-qp-p/langchain-deepagents/commit/398f7f4512182a8e51cbdfbfb9dc211c77014e2b))
+* **cli:** restore ctrl+j newline keybinding ([#2827](https://github.com/q-qp-p/langchain-deepagents/issues/2827)) ([2e1a3f4](https://github.com/q-qp-p/langchain-deepagents/commit/2e1a3f45a9ff56390e294ea5b0f6a837200874ec))
+* **cli:** scroll tall `ask_user prompts` to top of viewport ([#3238](https://github.com/q-qp-p/langchain-deepagents/issues/3238)) ([705daa7](https://github.com/q-qp-p/langchain-deepagents/commit/705daa7e651153cb2cf80455131fcfe4311973b9))
+* **cli:** show `Resuming...` banner immediately on thread resume ([#3297](https://github.com/q-qp-p/langchain-deepagents/issues/3297)) ([3bb2782](https://github.com/q-qp-p/langchain-deepagents/commit/3bb2782ae8bd42d9521b611ebdfc42456b7d41a2))
+* **cli:** show detached HEAD commit in local context ([#3144](https://github.com/q-qp-p/langchain-deepagents/issues/3144)) ([569d4f0](https://github.com/q-qp-p/langchain-deepagents/commit/569d4f0d7d699bace7820eb171a6bd605b2a1a18))
+* **cli:** show pending token placeholder during streaming and restore on early exit ([#3288](https://github.com/q-qp-p/langchain-deepagents/issues/3288)) ([882232d](https://github.com/q-qp-p/langchain-deepagents/commit/882232dbc4ffbaf0bedeb12f0f3119024352ac43))
+* **cli:** startup import deadlock ([#3017](https://github.com/q-qp-p/langchain-deepagents/issues/3017)) ([d40ab57](https://github.com/q-qp-p/langchain-deepagents/commit/d40ab57800a6ad12b0c9a5e249753702ec0832c8))
+* **cli:** support modified backspace word deletion ([#3037](https://github.com/q-qp-p/langchain-deepagents/issues/3037)) ([bc3d019](https://github.com/q-qp-p/langchain-deepagents/commit/bc3d01916d2ba34be07d56c9eb9b813008c1584c))
+* **cli:** suppress LangSmith trace for `_context_tokens` state writes ([#3317](https://github.com/q-qp-p/langchain-deepagents/issues/3317)) ([63db13e](https://github.com/q-qp-p/langchain-deepagents/commit/63db13ee262d19a1a87fbe4df1271a2e958deed6))
+* **cli:** suppress noisy network warnings from interrupt cleanup ([#3250](https://github.com/q-qp-p/langchain-deepagents/issues/3250)) ([4e4a8fe](https://github.com/q-qp-p/langchain-deepagents/commit/4e4a8fedd1ed72606ac0df336859ba5d7180021f))
+* **cli:** suppress token placeholder on first invoke ([#3302](https://github.com/q-qp-p/langchain-deepagents/issues/3302)) ([c21dee2](https://github.com/q-qp-p/langchain-deepagents/commit/c21dee2e9bc1a7d3f52ff62e9e66d1caaaf7b464))
+* **cli:** sync thread ID and render clickable link on `/clear` ([#3305](https://github.com/q-qp-p/langchain-deepagents/issues/3305)) ([0904974](https://github.com/q-qp-p/langchain-deepagents/commit/0904974d52dff259809d00a7a8b26c3e894cc0c0))
+* **cli:** throttle update notification to once per day and fix teardown banner ([#2764](https://github.com/q-qp-p/langchain-deepagents/issues/2764)) ([ba31294](https://github.com/q-qp-p/langchain-deepagents/commit/ba31294b733d4ef542d18830eec6df30cfa0d23f))
+* **cli:** truncate multi-line shell commands in HITL approval ([#3314](https://github.com/q-qp-p/langchain-deepagents/issues/3314)) ([7ab6e14](https://github.com/q-qp-p/langchain-deepagents/commit/7ab6e14565d6dd9d9c9e76d9d6677e5568a727f7))
+* **sdk:** default OpenRouter routing to ignore Azure upstream ([#3157](https://github.com/q-qp-p/langchain-deepagents/issues/3157)) ([01a9113](https://github.com/q-qp-p/langchain-deepagents/commit/01a911379d368fab8280cd827c38776800abe7b8))
+
+
+### Performance Improvements
+
+* **cli:** gate dropped-path detection on multi-character insert size ([#3343](https://github.com/q-qp-p/langchain-deepagents/issues/3343)) ([06a21e8](https://github.com/q-qp-p/langchain-deepagents/commit/06a21e8a69738b7ba055d2f13dae4cd9fab353cd))
+* **cli:** skip runtime imports for bare command help ([#3107](https://github.com/q-qp-p/langchain-deepagents/issues/3107)) ([9cc4f58](https://github.com/q-qp-p/langchain-deepagents/commit/9cc4f5837b8d705f3e5f604b6e6affa39876b2f5))
+
+
+### Reverted Changes
+
+* **cli:** broken filesystem permissions import ([#3040](https://github.com/q-qp-p/langchain-deepagents/issues/3040)) ([00699be](https://github.com/q-qp-p/langchain-deepagents/commit/00699bee9d26c753b629a1b73f439987082af047))
+
 ## [0.1.2](https://github.com/langchain-ai/deepagents/compare/deepagents-cli==0.1.1...deepagents-cli==0.1.2) (2026-05-21)
 
 ### Bug Fixes
