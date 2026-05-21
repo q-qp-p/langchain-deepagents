@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.0.7](https://github.com/q-qp-p/langchain-deepagents/compare/deepagents-acp==0.0.6...deepagents-acp==0.0.7) (2026-05-21)
+
+
+### Features
+
+* **acp:** Adds Opus 4.7 and Baseten to demo agent ([#2787](https://github.com/q-qp-p/langchain-deepagents/issues/2787)) ([bfb16a6](https://github.com/q-qp-p/langchain-deepagents/commit/bfb16a645178f8134611d90b4aca4ddd43e2fdb9))
+* **sdk:** v0.6 ([4db09ac](https://github.com/q-qp-p/langchain-deepagents/commit/4db09acba34b38521192b8f278723524be560779))
+
+
+### Bug Fixes
+
+* **acp:** restore passing tests after acp v0.9 schema bump ([#2813](https://github.com/q-qp-p/langchain-deepagents/issues/2813)) ([29a351a](https://github.com/q-qp-p/langchain-deepagents/commit/29a351a8f5de8c460a3eeaadd76a3c2ace0072e0))
+* **acp:** Upper bound ACP ([#2733](https://github.com/q-qp-p/langchain-deepagents/issues/2733)) ([02ff02f](https://github.com/q-qp-p/langchain-deepagents/commit/02ff02f5424afc7fd7cb82bd7dbb5c07272ed923))
+
 ## [0.0.6](https://github.com/langchain-ai/deepagents/compare/deepagents-acp==0.0.5...deepagents-acp==0.0.6) (2026-04-18)
 
 ### Features
