@@ -2,6 +2,13 @@
 
 # Changelog
 
+## [0.0.8](https://github.com/q-qp-p/langchain-deepagents/compare/langchain-runloop==0.0.7...langchain-runloop==0.0.8) (2026-08-25)
+
+
+### Bug Fixes
+
+* **runloop:** require deepagents 0.7.x ([#5149](https://github.com/q-qp-p/langchain-deepagents/issues/5149)) ([ea09982](https://github.com/q-qp-p/langchain-deepagents/commit/ea099822621cc92e4e10e6dc254f474f607213db))
+
 ## [0.0.7](https://github.com/langchain-ai/deepagents/compare/langchain-runloop==0.0.6...langchain-runloop==0.0.7) (2026-07-29)
 
 ### Bug Fixes
