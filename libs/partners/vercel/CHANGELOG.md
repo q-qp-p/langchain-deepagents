@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.3](https://github.com/q-qp-p/langchain-deepagents/compare/langchain-vercel-sandbox==0.0.2...langchain-vercel-sandbox==0.0.3) (2026-08-25)
+
+
+### Bug Fixes
+
+* **vercel:** require deepagents 0.7.x ([#5150](https://github.com/q-qp-p/langchain-deepagents/issues/5150)) ([d4e4c30](https://github.com/q-qp-p/langchain-deepagents/commit/d4e4c30b53f751b073dfd2da76b2817d3e768fab))
+
 ## [0.0.2](https://github.com/langchain-ai/deepagents/compare/langchain-vercel-sandbox==0.0.1...langchain-vercel-sandbox==0.0.2) (2026-07-29)
 
 ### Bug Fixes
