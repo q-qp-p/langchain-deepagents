@@ -2,6 +2,38 @@
 
 # Deep Agents Changelog
 
+## [0.7.14](https://github.com/q-qp-p/langchain-deepagents/compare/deepagents==0.7.13...deepagents==0.7.14) (2026-09-12)
+
+
+### Features
+
+* **sdk,code:** update `read_file` output formatting ([#5648](https://github.com/q-qp-p/langchain-deepagents/issues/5648)) ([276beca](https://github.com/q-qp-p/langchain-deepagents/commit/276becae1bbaa38d6253aee90e99212e7bdf0606))
+* **sdk:** add rubric grader integration hooks ([#5874](https://github.com/q-qp-p/langchain-deepagents/issues/5874)) ([07c0340](https://github.com/q-qp-p/langchain-deepagents/commit/07c0340bc41e3717f1cd73705b71f1f6a87d753f))
+* **sdk:** add subagent conversation forking ([#5714](https://github.com/q-qp-p/langchain-deepagents/issues/5714)) ([6b4427f](https://github.com/q-qp-p/langchain-deepagents/commit/6b4427f07dc35a0b61cf8224db090ea6bee6f72f))
+* **sdk:** disable tracing inputs on middleware ([#5377](https://github.com/q-qp-p/langchain-deepagents/issues/5377)) ([0aade99](https://github.com/q-qp-p/langchain-deepagents/commit/0aade99211dc45cc85ce8b95fc375612f982b48a))
+
+
+### Bug Fixes
+
+* **sdk:** add `files` state only for state backends ([#5643](https://github.com/q-qp-p/langchain-deepagents/issues/5643)) ([63c13f3](https://github.com/q-qp-p/langchain-deepagents/commit/63c13f3e6bc79a5304e542178ac410b517c64c31))
+* **sdk:** batch concurrent `ContextHubBackend` mutations ([#5471](https://github.com/q-qp-p/langchain-deepagents/issues/5471)) ([822f7c9](https://github.com/q-qp-p/langchain-deepagents/commit/822f7c9b02e6d99bdb46b5545bb2543783c01769))
+* **sdk:** bound compaction recovery and validate input budgets ([#6267](https://github.com/q-qp-p/langchain-deepagents/issues/6267)) ([bb6d431](https://github.com/q-qp-p/langchain-deepagents/commit/bb6d4316eb59b368b862e5517b888e5e70b1c3ae))
+* **sdk:** clarify zero execute timeout semantics ([#5752](https://github.com/q-qp-p/langchain-deepagents/issues/5752)) ([4b49286](https://github.com/q-qp-p/langchain-deepagents/commit/4b4928613262ac23d419f0e8788f24412a8fdafb))
+* **sdk:** enforce full criterion coverage in `RubricMiddleware` ([#5234](https://github.com/q-qp-p/langchain-deepagents/issues/5234)) ([ddb69b6](https://github.com/q-qp-p/langchain-deepagents/commit/ddb69b609a02d7203cda7f3ea2796ca73e5b5795))
+* **sdk:** exclude tools from execution when setting `excluded_tools` in harness profiles ([#5809](https://github.com/q-qp-p/langchain-deepagents/issues/5809)) ([553d412](https://github.com/q-qp-p/langchain-deepagents/commit/553d412bb4f4b868fbf080ab561f76b4dd335f52))
+* **sdk:** fix character counting in `ls` and `glob` output ([#6204](https://github.com/q-qp-p/langchain-deepagents/issues/6204)) ([4ca678f](https://github.com/q-qp-p/langchain-deepagents/commit/4ca678fe11fcb8f452b59b31923f37dabbc26d6a))
+* **sdk:** keep blank read windows out of the empty-file warning ([#5050](https://github.com/q-qp-p/langchain-deepagents/issues/5050)) ([a892a0e](https://github.com/q-qp-p/langchain-deepagents/commit/a892a0ee26d045256b6d3b0c224b3de663c83eb5))
+* **sdk:** make `BackendProtocol.glob` recursive for bare patterns ([#5026](https://github.com/q-qp-p/langchain-deepagents/issues/5026)) ([32f35d5](https://github.com/q-qp-p/langchain-deepagents/commit/32f35d5e01f460549c10365eb569978909f5c969))
+* **sdk:** offload conversation history to distinct session ID when summarizing ([#5470](https://github.com/q-qp-p/langchain-deepagents/issues/5470)) ([fa55c52](https://github.com/q-qp-p/langchain-deepagents/commit/fa55c52fe774462b2775c0d77dcf811d6dfd0e35))
+* **sdk:** patch invalid partial tool calls ([#5430](https://github.com/q-qp-p/langchain-deepagents/issues/5430)) ([edc7c1c](https://github.com/q-qp-p/langchain-deepagents/commit/edc7c1ca69831c1827c1f479696a5450ffd1df9d))
+* **sdk:** prevent local shell commands from stealing TUI input ([#5873](https://github.com/q-qp-p/langchain-deepagents/issues/5873)) ([c94a090](https://github.com/q-qp-p/langchain-deepagents/commit/c94a090c1b21918c9e4eced52ecb4e3bf7476f43))
+* **sdk:** reject empty old_string in edit_file paths ([#5747](https://github.com/q-qp-p/langchain-deepagents/issues/5747)) ([1281b04](https://github.com/q-qp-p/langchain-deepagents/commit/1281b04f7eafaf654982b99a3c93f72744208eda))
+* **sdk:** rename `handoff` subagent mode to `isolated` ([#6030](https://github.com/q-qp-p/langchain-deepagents/issues/6030)) ([15454a8](https://github.com/q-qp-p/langchain-deepagents/commit/15454a85438146a59c804af3a525f96091c55fe8))
+* **sdk:** suggest populating path in `glob` tool result where appropriate ([#6199](https://github.com/q-qp-p/langchain-deepagents/issues/6199)) ([26954ea](https://github.com/q-qp-p/langchain-deepagents/commit/26954eaafb581db641dd7ce3f9d4ba470a9af878))
+* **sdk:** surface sandbox glob failures instead of reporting no matches ([#5566](https://github.com/q-qp-p/langchain-deepagents/issues/5566)) ([0286f62](https://github.com/q-qp-p/langchain-deepagents/commit/0286f628646d4196e5e89164b45803fb7b97a0cc))
+* **sdk:** tolerate missing `modified_at` in glob sort ([#4376](https://github.com/q-qp-p/langchain-deepagents/issues/4376)) ([09b2e53](https://github.com/q-qp-p/langchain-deepagents/commit/09b2e53617968a06c2b4ee6d821fca71a1d94d49))
+* **sdk:** update imputed `ToolMessage` content in `PatchToolCallsMiddleware` ([#6277](https://github.com/q-qp-p/langchain-deepagents/issues/6277)) ([178417d](https://github.com/q-qp-p/langchain-deepagents/commit/178417d0dad063fea0300db68455f4574ef67db3))
+
 ## [0.7.13](https://github.com/langchain-ai/deepagents/compare/deepagents==0.7.12...deepagents==0.7.13) (2026-09-02)
 
 ### Bug Fixes
