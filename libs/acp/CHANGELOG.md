@@ -2,6 +2,14 @@
 
 # Changelog
 
+## [0.0.13](https://github.com/q-qp-p/langchain-deepagents/compare/deepagents-acp==0.0.12...deepagents-acp==0.0.13) (2026-10-05)
+
+
+### Bug Fixes
+
+* **acp:** scope cancel() to the requested session ([#5107](https://github.com/q-qp-p/langchain-deepagents/issues/5107)) ([96236d2](https://github.com/q-qp-p/langchain-deepagents/commit/96236d275f6799eeed80235eaa2054ee0e5bc8b7))
+* **acp:** use valid Claude 5.5 model IDs in demo ([#6684](https://github.com/q-qp-p/langchain-deepagents/issues/6684)) ([dd0e2f5](https://github.com/q-qp-p/langchain-deepagents/commit/dd0e2f5366da3704585a372aa905734cafcec900))
+
 ## [0.0.12](https://github.com/langchain-ai/deepagents/compare/deepagents-acp==0.0.11...deepagents-acp==0.0.12) (2026-09-18)
 
 ### Bug Fixes
