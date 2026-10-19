@@ -2,6 +2,13 @@
 
 # Changelog
 
+## [0.0.7](https://github.com/q-qp-p/langchain-deepagents/compare/langchain-modal==0.0.6...langchain-modal==0.0.7) (2026-08-25)
+
+
+### Bug Fixes
+
+* **modal:** require deepagents 0.7.x ([#5148](https://github.com/q-qp-p/langchain-deepagents/issues/5148)) ([ad6d1a3](https://github.com/q-qp-p/langchain-deepagents/commit/ad6d1a3547b5c0f9efc40ee5591c1a54b99652f4))
+
 ## [0.0.6](https://github.com/langchain-ai/deepagents/compare/langchain-modal==0.0.5...langchain-modal==0.0.6) (2026-07-29)
 
 ### Bug Fixes
