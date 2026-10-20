@@ -2,6 +2,59 @@
 
 # Deep Agents Changelog
 
+## [0.7.29](https://github.com/q-qp-p/langchain-deepagents/compare/deepagents==0.7.28...deepagents==0.7.29) (2026-10-20)
+
+
+### Features
+
+* **sdk:** allow `FilesystemMiddleware` to store blobs on backend ([#6550](https://github.com/q-qp-p/langchain-deepagents/issues/6550)) ([e38e6c9](https://github.com/q-qp-p/langchain-deepagents/commit/e38e6c91def8067e0dec2694d5410d0306f32553))
+* **sdk:** expose `summarizer` on summarization middleware ([#6900](https://github.com/q-qp-p/langchain-deepagents/issues/6900)) ([4b955e8](https://github.com/q-qp-p/langchain-deepagents/commit/4b955e844f09ccb0f546644ae705e9fc3b9928b0))
+* **sdk:** load a skill's tools only when the skill is read ([#6552](https://github.com/q-qp-p/langchain-deepagents/issues/6552)) ([92cd8e7](https://github.com/q-qp-p/langchain-deepagents/commit/92cd8e7fa8b1f8da346ec91e420a820518497f2c))
+* **sdk:** nest async subagent runs under the parent's trace ([#6823](https://github.com/q-qp-p/langchain-deepagents/issues/6823)) ([3cd9463](https://github.com/q-qp-p/langchain-deepagents/commit/3cd94633d3fe5d434fbf492d64f6f53a3e6dcafe))
+* **sdk:** pin skills by name via `pinned_skills` ([#6810](https://github.com/q-qp-p/langchain-deepagents/issues/6810)) ([7022633](https://github.com/q-qp-p/langchain-deepagents/commit/70226333bac013b1b1e37acedfb7955f7e6cd6f8))
+* **sdk:** read inline skill tool support from model profiles ([#6879](https://github.com/q-qp-p/langchain-deepagents/issues/6879)) ([f5d9c31](https://github.com/q-qp-p/langchain-deepagents/commit/f5d9c31163dda54898bdb4f73a2580c9430a16d5))
+* **sdk:** reload skills when `skills_metadata` is reset to `None` ([#6364](https://github.com/q-qp-p/langchain-deepagents/issues/6364)) ([f86b4e9](https://github.com/q-qp-p/langchain-deepagents/commit/f86b4e9abef7620b63a7258bc9fab0ccd83de8a4))
+* **sdk:** report async subagents that are waiting for a human ([#6842](https://github.com/q-qp-p/langchain-deepagents/issues/6842)) ([825acb3](https://github.com/q-qp-p/langchain-deepagents/commit/825acb3ca03bd103e4df6013b122eca8475d1982))
+* **sdk:** support fork mode for async subagents ([#6739](https://github.com/q-qp-p/langchain-deepagents/issues/6739)) ([c31c7fd](https://github.com/q-qp-p/langchain-deepagents/commit/c31c7fd89d0b7cf77af292f5629cc4929d51e429))
+* **sdk:** tell async subagents which agent launched them ([#6836](https://github.com/q-qp-p/langchain-deepagents/issues/6836)) ([168ac6b](https://github.com/q-qp-p/langchain-deepagents/commit/168ac6b7054edec7eb4c1923059cbaec67a7f5c1))
+* **sdk:** tell the main agent about async subagent status updates ([#6853](https://github.com/q-qp-p/langchain-deepagents/issues/6853)) ([9cf009b](https://github.com/q-qp-p/langchain-deepagents/commit/9cf009bb21b6bf3578f94555ac4ebfbc59d4e500))
+
+
+### Bug Fixes
+
+* **sdk:** accommodate routes without trailing slash in CompositeBackend ([#7028](https://github.com/q-qp-p/langchain-deepagents/issues/7028)) ([0ce837b](https://github.com/q-qp-p/langchain-deepagents/commit/0ce837bf69ff0efb10c2fa100039cc0c78a74a11))
+* **sdk:** allow colons in profile model keys ([#6334](https://github.com/q-qp-p/langchain-deepagents/issues/6334)) ([257872e](https://github.com/q-qp-p/langchain-deepagents/commit/257872eea59368a0c3aac003f71d3c83ce44c833))
+* **sdk:** bound tool offload paths and abbreviate long IDs ([#6519](https://github.com/q-qp-p/langchain-deepagents/issues/6519)) ([ca5f0e5](https://github.com/q-qp-p/langchain-deepagents/commit/ca5f0e5eae7ee749e81ae8e9e3bbc1762447fcc2))
+* **sdk:** check filesystem permissions against the symlink-resolved path ([#6818](https://github.com/q-qp-p/langchain-deepagents/issues/6818)) ([7a69743](https://github.com/q-qp-p/langchain-deepagents/commit/7a6974309ac78f0b2ea636afc70bd8a0268bed7f))
+* **sdk:** disclose byte-cap losses in capture-offload execute previews ([#5567](https://github.com/q-qp-p/langchain-deepagents/issues/5567)) ([dbdd6fb](https://github.com/q-qp-p/langchain-deepagents/commit/dbdd6fbb47f340de8d23092187aa2882242963f8))
+* **sdk:** disclose per-line clipping in large-result previews ([#5564](https://github.com/q-qp-p/langchain-deepagents/issues/5564)) ([5014cf7](https://github.com/q-qp-p/langchain-deepagents/commit/5014cf7f7480c5e080095c9e3396e4ce93421053))
+* **sdk:** explain truncation markers only when preview omits lines ([#5563](https://github.com/q-qp-p/langchain-deepagents/issues/5563)) ([7b4fcd3](https://github.com/q-qp-p/langchain-deepagents/commit/7b4fcd398b2a9bcd875b193c32d1eb97f152ce21))
+* **sdk:** give id-less tool result offloads unique paths ([#6316](https://github.com/q-qp-p/langchain-deepagents/issues/6316)) ([a0c2ad0](https://github.com/q-qp-p/langchain-deepagents/commit/a0c2ad03c6dcd52340e91bea6483ee7750d5deee))
+* **sdk:** make `ContextHubBackend.glob` honor `path` ([#6998](https://github.com/q-qp-p/langchain-deepagents/issues/6998)) ([dd6706d](https://github.com/q-qp-p/langchain-deepagents/commit/dd6706d3007b4a077985b38bbc0d4a792c7016bc))
+* **sdk:** preserve backend exit status when capture metadata is missing ([#6451](https://github.com/q-qp-p/langchain-deepagents/issues/6451)) ([c9926b1](https://github.com/q-qp-p/langchain-deepagents/commit/c9926b1a96d204309d0b211701b288ce3bb4244b))
+* **sdk:** preserve legacy large-result templates behind deprecation ([#5568](https://github.com/q-qp-p/langchain-deepagents/issues/5568)) ([4932d70](https://github.com/q-qp-p/langchain-deepagents/commit/4932d7066fc9f3464921ab72d5d86922ea4b26ec))
+* **sdk:** preserve parent rubric during parallel subagent calls ([#6849](https://github.com/q-qp-p/langchain-deepagents/issues/6849)) ([9740b88](https://github.com/q-qp-p/langchain-deepagents/commit/9740b88c06109890447ddd005871943f251c99c5))
+* **sdk:** preserve resolved tool-result paths ([#6968](https://github.com/q-qp-p/langchain-deepagents/issues/6968)) ([29d646f](https://github.com/q-qp-p/langchain-deepagents/commit/29d646fd2d832a44c476964333eddecb0ec1c0cd))
+* **sdk:** propagate subagent name to subagents ([#6987](https://github.com/q-qp-p/langchain-deepagents/issues/6987)) ([610a5fb](https://github.com/q-qp-p/langchain-deepagents/commit/610a5fb036120e272842684e4bbd4909c6cf7c1f))
+* **sdk:** propagate subagent state keys for provided subagent middleware ([#5553](https://github.com/q-qp-p/langchain-deepagents/issues/5553)) ([ff8dda9](https://github.com/q-qp-p/langchain-deepagents/commit/ff8dda912b0d1651f234b9d49cec06e79b7c1b6b))
+* **sdk:** put a subagent's own `SkillsMiddleware` in the skills slot ([#6820](https://github.com/q-qp-p/langchain-deepagents/issues/6820)) ([9a91d79](https://github.com/q-qp-p/langchain-deepagents/commit/9a91d79e18dacfe900ac62e59c756e87f3b586a7))
+* **sdk:** recover from context overflow in the summary call ([#6864](https://github.com/q-qp-p/langchain-deepagents/issues/6864)) ([efd88ff](https://github.com/q-qp-p/langchain-deepagents/commit/efd88ff8fd1279361de77a83c9f75d98ed2f36d5))
+* **sdk:** recover from rejected `read_file` media ([#6515](https://github.com/q-qp-p/langchain-deepagents/issues/6515)) ([802140c](https://github.com/q-qp-p/langchain-deepagents/commit/802140c1a7d1fff35a7edd8d0f1697eb460ce623))
+* **sdk:** reject parallel same-file edits ([#6446](https://github.com/q-qp-p/langchain-deepagents/issues/6446)) ([2e2ee91](https://github.com/q-qp-p/langchain-deepagents/commit/2e2ee91b794ed549b299445b7bb5de641e9a4f4d))
+* **sdk:** reject unknown keys in the task tool arguments ([#6299](https://github.com/q-qp-p/langchain-deepagents/issues/6299)) ([00fef9c](https://github.com/q-qp-p/langchain-deepagents/commit/00fef9c012b20f91785dc5e83c642fb439832178))
+* **sdk:** report UTF-8 byte sizes ([#6258](https://github.com/q-qp-p/langchain-deepagents/issues/6258)) ([5bac4aa](https://github.com/q-qp-p/langchain-deepagents/commit/5bac4aae53494329a533294564353b10c3385244))
+* **sdk:** reset stale encoding on text overwrite ([#6737](https://github.com/q-qp-p/langchain-deepagents/issues/6737)) ([fb62fb0](https://github.com/q-qp-p/langchain-deepagents/commit/fb62fb067b924a36359505f9445c1ecc55fd7d66))
+* **sdk:** restrict inline file blocks to supported MIME types ([#6447](https://github.com/q-qp-p/langchain-deepagents/issues/6447)) ([191e93a](https://github.com/q-qp-p/langchain-deepagents/commit/191e93a05e30aad705ee2cb33d5b03e7104dbe5a))
+* **sdk:** skip binary files in in-memory `grep` ([#7032](https://github.com/q-qp-p/langchain-deepagents/issues/7032)) ([97f856d](https://github.com/q-qp-p/langchain-deepagents/commit/97f856dcb08264ef78722a4687cab9133ec5fb7a))
+* **sdk:** tag binary `StateBackend.upload_files` content as base64 ([#6551](https://github.com/q-qp-p/langchain-deepagents/issues/6551)) ([b1ebc5b](https://github.com/q-qp-p/langchain-deepagents/commit/b1ebc5bd51aab19c1251197b1b8eb699c85cfc00))
+* **sdk:** use separate middleware for filtering unsupported multimodal content ([#6366](https://github.com/q-qp-p/langchain-deepagents/issues/6366)) ([737621b](https://github.com/q-qp-p/langchain-deepagents/commit/737621ba73c39ac822c78c144612336bd02de6fb))
+
+
+### Performance Improvements
+
+* **sdk:** prefer ripgrep for sandbox searches ([#6919](https://github.com/q-qp-p/langchain-deepagents/issues/6919)) ([7a655f7](https://github.com/q-qp-p/langchain-deepagents/commit/7a655f77382484a6e6ca27e8724b08064af670c8))
+* **sdk:** skip `.git` in sandbox `grep` and fix path-glob `grep` ([#6910](https://github.com/q-qp-p/langchain-deepagents/issues/6910)) ([f8ecffa](https://github.com/q-qp-p/langchain-deepagents/commit/f8ecffad6523775a323a807bc57097a98aa27e01))
+
 ## [0.7.28](https://github.com/langchain-ai/deepagents/compare/deepagents==0.7.27...deepagents==0.7.28) (2026-10-16)
 
 ### Bug Fixes
