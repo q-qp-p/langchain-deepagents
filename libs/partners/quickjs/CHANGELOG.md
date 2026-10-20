@@ -2,6 +2,18 @@
 
 # Changelog
 
+## [0.3.10](https://github.com/q-qp-p/langchain-deepagents/compare/langchain-quickjs==0.3.9...langchain-quickjs==0.3.10) (2026-10-20)
+
+
+### Features
+
+* **quickjs:** make subagent concurrency configurable ([#6926](https://github.com/q-qp-p/langchain-deepagents/issues/6926)) ([f957b8e](https://github.com/q-qp-p/langchain-deepagents/commit/f957b8edd29d3146bf265aa7886c24e5fcd9a50f))
+
+
+### Bug Fixes
+
+* **quickjs:** preserve subagent identity across interrupt replays ([#6370](https://github.com/q-qp-p/langchain-deepagents/issues/6370)) ([d31d7fc](https://github.com/q-qp-p/langchain-deepagents/commit/d31d7fcca9fd2c1b891318c97b95b06bb31fd630))
+
 ## [0.3.9](https://github.com/langchain-ai/deepagents/compare/langchain-quickjs==0.3.8...langchain-quickjs==0.3.9) (2026-10-13)
 
 ### Features
