@@ -2,6 +2,22 @@
 
 # Changelog
 
+## [0.3.13](https://github.com/q-qp-p/langchain-deepagents/compare/langchain-quickjs==0.3.12...langchain-quickjs==0.3.13) (2026-11-08)
+
+
+### Features
+
+* **quickjs:** allow disabling the per-call `timeout` ([#6958](https://github.com/q-qp-p/langchain-deepagents/issues/6958)) ([3b992d2](https://github.com/q-qp-p/langchain-deepagents/commit/3b992d2d8dfa3bade91e612b2d6ef2dfb57603b6))
+* **quickjs:** make subagent concurrency configurable ([#6926](https://github.com/q-qp-p/langchain-deepagents/issues/6926)) ([f957b8e](https://github.com/q-qp-p/langchain-deepagents/commit/f957b8edd29d3146bf265aa7886c24e5fcd9a50f))
+
+
+### Bug Fixes
+
+* **quickjs:** cache the PTC prompt per slot and tool identity ([#7296](https://github.com/q-qp-p/langchain-deepagents/issues/7296)) ([e72c1e6](https://github.com/q-qp-p/langchain-deepagents/commit/e72c1e6ca67f23ce49f6cbefcc1805f20133dea1))
+* **quickjs:** defer runtime initialization until evaluation ([#7301](https://github.com/q-qp-p/langchain-deepagents/issues/7301)) ([12b4a78](https://github.com/q-qp-p/langchain-deepagents/commit/12b4a7801981e6edcc928da158dcb872a870a447))
+* **quickjs:** don't block interpreter shutdown in CodeInterpreterMiddleware.__del__ ([#7460](https://github.com/q-qp-p/langchain-deepagents/issues/7460)) ([6578cc1](https://github.com/q-qp-p/langchain-deepagents/commit/6578cc10b3fe5f81d423921b0ff8c82f63bb609f))
+* **quickjs:** resolve nested schema `$ref`s in PTC signatures ([#7441](https://github.com/q-qp-p/langchain-deepagents/issues/7441)) ([5829691](https://github.com/q-qp-p/langchain-deepagents/commit/5829691de8f43d201f9534fb731643223c0bbccc))
+
 ## [0.3.12](https://github.com/langchain-ai/deepagents/compare/langchain-quickjs==0.3.11...langchain-quickjs==0.3.12) (2026-11-07)
 
 ### Features
